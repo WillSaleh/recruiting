@@ -3,3 +3,5 @@ flask-cors~=5.0.0
 Flask-SQLAlchemy~=3.0
 numpy~=2.1.2
 prometheus-client
+pytest
+ruff
