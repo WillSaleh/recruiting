@@ -66,7 +66,6 @@ jobs:
             npm install
           fi
 
-      # Run typecheck explicitly so errors are obvious in logs
       - name: TypeScript typecheck
         run: npx tsc --noEmit
 
@@ -108,8 +107,6 @@ jobs:
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v3
 
-      # Adjust context/file if your repo uses multiple Dockerfiles.
-      # The recruiting repo usually has a single root Dockerfile.
       - name: Build root Dockerfile
         uses: docker/build-push-action@v6
         with:
